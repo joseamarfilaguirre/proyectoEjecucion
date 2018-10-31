@@ -24,6 +24,6 @@ namespace Ejecucion.Core.Entidades
         public int IdAvance { set; get; }
         public float MontoContratoPesos { set; get; }
         public float MontoContratoUVI { set; get; }
-        public DateTime FechaOferta { set; get; }
+        //public DateTime FechaOferta { set; get; }
     }
 }
