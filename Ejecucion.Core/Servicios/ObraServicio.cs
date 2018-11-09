@@ -11,7 +11,7 @@ namespace Ejecucion.Core.Servicios
 {
     public class ObraServicio : IObraServicio
     {
-        private readonly ObraLogica Logica = new ObraLogica(); 
+        private readonly ObraLogica logica = new ObraLogica(); 
         public void actualizarObra(Obras obra)
         {
             throw new NotImplementedException();
@@ -39,14 +39,20 @@ namespace Ejecucion.Core.Servicios
 
         public Obras traerObra(int obraId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return logica.TraerObra(obraId);
+            }
+            catch(NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
+            
         }
 
         public List<Obras> TraerObra(string Buscar)
         {
             try
             {
-                return Logica.TraerObra(Buscar);
+                return logica.TraerObras(Buscar);
             }
             catch(NegocioException ex) { throw (ex); }
             catch(Exception ex){throw (ex);}

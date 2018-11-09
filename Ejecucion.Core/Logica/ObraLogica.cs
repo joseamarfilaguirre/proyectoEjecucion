@@ -9,7 +9,13 @@ namespace Ejecucion.Core.Logica
 {
     class ObraLogica
     {
-        internal List<Obras> TraerObra(string buscar)
+
+        internal Obras TraerObra(int obraId)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal List<Obras> TraerObras(string buscar)
         {
             throw new NotImplementedException();
         }
