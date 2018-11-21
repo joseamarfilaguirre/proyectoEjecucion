@@ -68,7 +68,7 @@ namespace Ejecucion.Core.Servicios
         {
             try
             {
-                  return  departamento.TraerDptoProvincias(buscar);
+                  return  departamentoLogica.TraerDptoProvincias(buscar);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
