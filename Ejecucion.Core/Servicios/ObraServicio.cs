@@ -14,27 +14,52 @@ namespace Ejecucion.Core.Servicios
         private readonly ObraLogica logica = new ObraLogica(); 
         public void actualizarObra(Obras obra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                logica.ActualizarObra(obra);
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
         public void agregarObra(Obras obra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                logica.AgregarObra(obra);
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
         public void eliminarObra(int obraId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                logica.EliminarObra(obraId);
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
         public List<DptoProvincia> TraerDptos(string Buscar)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return logica.TraerDptos();
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
         public List<EmpresaConstructora> TraerEmpresaConstructora(string Buscar)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return logica.TraerEmpresaConstructora();
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
         public Obras traerObra(int obraId)
@@ -48,11 +73,11 @@ namespace Ejecucion.Core.Servicios
             
         }
 
-        public List<Obras> TraerObra(string Buscar)
+        public List<Obras> TraerObra(int obraId)
         {
             try
             {
-                return logica.TraerObras(Buscar);
+                return logica.TraerObras(obraId);
             }
             catch(NegocioException ex) { throw (ex); }
             catch(Exception ex){throw (ex);}
@@ -60,7 +85,12 @@ namespace Ejecucion.Core.Servicios
 
         public List<Programa> TraerObras(string Buscar)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return logica.TraerObras();
+            }
+            catch (NegocioException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
     }
 }

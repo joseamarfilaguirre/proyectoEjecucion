@@ -10,7 +10,7 @@ namespace Ejecucion.Core.Servicios
     interface IObraServicio
     {
         //Obra
-        List<Obras> TraerObra(string Buscar);
+        List<ObraBrowse> TraerObra(int obrdaId);
         Obras traerObra(int obraId);
         void agregarObra(Obras obra);
         void actualizarObra(Obras obra);

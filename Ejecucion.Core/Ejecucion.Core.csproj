@@ -46,6 +46,7 @@
     <Compile Include="Datos\ProgramaDato.cs" />
     <Compile Include="Entidades\DptoProvincia.cs" />
     <Compile Include="Entidades\EmpresaConstructora.cs" />
+    <Compile Include="Entidades\ObraBrowse.cs" />
     <Compile Include="Entidades\Obras.cs" />
     <Compile Include="Entidades\Programa.cs" />
     <Compile Include="Logica\DptoProvinciaLogica.cs" />
