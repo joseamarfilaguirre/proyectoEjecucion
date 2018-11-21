@@ -73,7 +73,7 @@ namespace Ejecucion.Core.Servicios
             
         }
 
-        public List<Obras> TraerObra(int obraId)
+        public List<ObraBrowse> TraerObra(int obraId)
         {
             try
             {
