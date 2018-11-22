@@ -9,12 +9,11 @@ namespace Ejecucion.Core.Entidades
     public class ObraBrowse
     {
         public int IdObra { get; set; }
-        public string CodigoObra { get; set; }
+        public string ExpMatriz { get; set; }
         public string Obra { get; set; }
         public string ACCU { get; set; }
         public int IdDptoProvincia { get; set; }
         public int IdPrograma { get; set; }
-        public int CantViviendas { get; set; }
         public int IdEmpConstructora { get; set; }
         public int CantParaSorteo { get; set; }
         public float montoOriginal { get; set; }

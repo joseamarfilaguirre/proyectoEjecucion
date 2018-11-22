@@ -9,7 +9,7 @@ namespace Ejecucion.Core.Entidades
     public partial class Obras
     {
         public int IdObra { set; get; }
-        public string Codigo { set; get; }
+        public string ExpMatriz { set; get; }
         public string ObraNombre { set; get; }
         public string ACCU { set; get; }
         public int IdDptoProv { set; get; }
