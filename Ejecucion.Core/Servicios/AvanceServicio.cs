@@ -9,15 +9,15 @@ using Comun.Exceptions;
 
 namespace Ejecucion.Core.Servicios
 {
-    public class ProgramaServicio : IPrograma
+    class AvanceServicio : IAvance
     {
-        private readonly ProgramaLogica programaLogica = new ProgramaLogica();
+        private readonly AvanceLogica avanceLogica = new AvanceLogica();
 
-        public void ActualizarPrograma(Programa programa)
+        public void ActualizarAvance(Avance avance)
         {
             try
             {
-                programaLogica.ActualizarPrograma(programa);
+                avanceLogica.ActualizarAvance(avance);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -26,23 +26,24 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public void AgregarPrograma(Programa programa)
+        public void AgregarAvance(Avance avance)
         {
             try
             {
-                programaLogica.AgregarPrograma(programa);
+                avanceLogica.AgregarAvance(avance);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
             {
                 throw ex;
             }
+
         }
-        public void QuitarPrograma(int programaId)
+        public void QuitarAvance(int idAvance)
         {
             try
             {
-                programaLogica.QuitarPrograma(programaId);
+                avanceLogica.QuitarAvance(idAvance);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -51,11 +52,11 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public Programa TraerPrograma(int programaId)
+        public Avance TraerAvance(int avanceId)
         {
             try
             {
-                return programaLogica.TraerPrograma(programaId);
+                return avanceLogica.TraerAvance(avanceId);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -64,17 +65,18 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public List<Programa> TraerProgramas(string buscar)
+        public List<Avance> TraerAvances(string buscar)
         {
             try
             {
-                return programaLogica.TraerProgramas(buscar);
+                return avanceLogica.TraerAvances(buscar);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
             {
                 throw ex;
             }
+
         }
     }
 }

@@ -73,24 +73,25 @@ namespace Ejecucion.Core.Servicios
             
         }
 
-        public List<ObraBrowse> TraerObra(int obraId)
+        public List<Obras> TraerObras(string Buscar)
         {
             try
             {
-                return logica.TraerObras(obraId);
+                return logica.TraerObras(Buscar);
             }
-            catch(NegocioException ex) { throw (ex); }
-            catch(Exception ex){throw (ex);}
+            catch (NegocioException ex) { throw (ex); }
+            catch (Exception ex) { throw (ex); }
         }
 
-        public List<Programa> TraerObras(string Buscar)
-        {
-            try
-            {
-                return logica.TraerObras();
-            }
-            catch (NegocioException ex) { throw ex; }
-            catch (Exception ex) { throw ex; }
-        }
+
+        //public List<Programa> TraerObras(string Buscar)
+        //{
+        //    try
+        //    {
+        //        return logica.TraerObras();
+        //    }
+        //    catch (NegocioException ex) { throw ex; }
+        //    catch (Exception ex) { throw ex; }
+        //}
     }
 }

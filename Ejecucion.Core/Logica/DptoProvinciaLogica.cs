@@ -25,18 +25,21 @@ namespace Ejecucion.Core.Logica
             else
                 throw new NegocioException("No se encontraron personas para el criterio de búsqueda ingresado.");
         }
-
         internal DptoProvincia TraerDptoProvincia(int departamentoId)
         {
-            // throw new NotImplementedException();
-            if (string.IsNullOrWhiteSpace(departamentoId))
-                throw new NegocioException("No se ha ingresado ningún criterio de búsqueda. Intente de nuevo.");
-            //return datos.TraerPersonas(buscar);
-            var provincia = datos.traerDptoProvincia(departamentoId);
-            if (provincia.Count > 0)
-                return provincia;
-            else
-                throw new NegocioException("No se encontraron personas para el criterio de búsqueda ingresado.");
+            //// throw new NotImplementedException();
+            //if (string.IsNullOrWhiteSpace(departamentoId))
+            //    throw new NegocioException("No se ha ingresado ningún criterio de búsqueda. Intente de nuevo.");
+            ////return datos.TraerPersonas(buscar);
+            //var provincia = datos.traerDptoProvincia(departamentoId);
+            //if (provincia.Count > 0)
+            //    return provincia;
+            //else
+            //    throw new NegocioException("No se encontraron personas para el criterio de búsqueda ingresado.");
+            if (departamentoId <= 0)
+                throw new NegocioException("El identificador de la persona no es correcto. Verifique.");
+            return datos.traerDptoProvincia(departamentoId);
+
         }
 
         internal void QuitarDptoprovincia(int departamentoId)

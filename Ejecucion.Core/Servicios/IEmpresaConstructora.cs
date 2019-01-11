@@ -15,16 +15,5 @@ namespace Ejecucion.Core.Servicios
         void AgregarEmpresaConstructora(EmpresaConstructora empresa);
         void ActualizarEmpresaConstructora(EmpresaConstructora empresa);
         void QuitarEmpresaConstructora(int empresaId);
-
-        ////Titulo
-        //List<Titulo> TraerTitulos();
-
-        ////TipoContacto
-        //List<TipoContacto> TraerTiposContacto();
-
-        ////Contacto
-        //List<Contacto> TraerFormasDeContactoDePersona(int personaId);
-        //void AgregarContacto(Contacto contacto);
-        //void QuitarContacto(int contactoId);
     }
 }

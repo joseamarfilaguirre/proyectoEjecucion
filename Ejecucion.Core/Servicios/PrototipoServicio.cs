@@ -9,15 +9,15 @@ using Comun.Exceptions;
 
 namespace Ejecucion.Core.Servicios
 {
-    public class ProgramaServicio : IPrograma
+    public class PrototipoServicio : IPrototipo
     {
-        private readonly ProgramaLogica programaLogica = new ProgramaLogica();
+        private readonly PrototipoLogica prototipoLogica = new PrototipoLogica();
 
-        public void ActualizarPrograma(Programa programa)
+        public void ActualizarPrototipo(Prototipo prototipo)
         {
             try
             {
-                programaLogica.ActualizarPrograma(programa);
+                prototipoLogica.ActualizarPrototipo(prototipo);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -26,23 +26,11 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public void AgregarPrograma(Programa programa)
+        public void AgregarPrototipo(Prototipo prototipo)
         {
             try
             {
-                programaLogica.AgregarPrograma(programa);
-            }
-            catch (NegocioException ex) { throw (ex); }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public void QuitarPrograma(int programaId)
-        {
-            try
-            {
-                programaLogica.QuitarPrograma(programaId);
+                prototipoLogica.AgregarPrototipo(prototipo);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -51,11 +39,11 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public Programa TraerPrograma(int programaId)
+        public void QuitarPrototipo(int prototipoId)
         {
             try
             {
-                return programaLogica.TraerPrograma(programaId);
+                prototipoLogica.QuitarPrototipo(prototipoId);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -64,11 +52,24 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public List<Programa> TraerProgramas(string buscar)
+        public Prototipo TraerPrototipo(int prototipoId)
         {
             try
             {
-                return programaLogica.TraerProgramas(buscar);
+                return prototipoLogica.TraerPrototipo(prototipoId);
+            }
+            catch (NegocioException ex) { throw (ex); }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Prototipo> TraerPrototipos(string buscar)
+        {
+            try
+            {
+                return prototipoLogica.TraerPrototipos(buscar);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)

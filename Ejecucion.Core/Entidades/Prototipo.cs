@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejecucion.Core.Entidades
 {
-    public partial class Programa
+    public partial class Prototipo
     {
-        public int IdPrograma { set; get; }
-        public string NombrePrograma { set; get; } 
+        public int IdPrototipo { set; get; }
+        public string DescripcionPrototipo { set; get; }
     }
 }

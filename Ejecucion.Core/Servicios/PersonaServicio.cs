@@ -9,15 +9,14 @@ using Comun.Exceptions;
 
 namespace Ejecucion.Core.Servicios
 {
-    public class ProgramaServicio : IPrograma
+    class PersonaServicio : IPersonaServicio
     {
-        private readonly ProgramaLogica programaLogica = new ProgramaLogica();
-
-        public void ActualizarPrograma(Programa programa)
+        private readonly PersonaLogica personaLogica = new PersonaLogica();
+        public void ActualizarPersona(Persona persona)
         {
             try
             {
-                programaLogica.ActualizarPrograma(programa);
+                personaLogica.ActualizarPersona(persona);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -26,23 +25,11 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public void AgregarPrograma(Programa programa)
+        public void AgreagarPersona(Persona persona)
         {
             try
             {
-                programaLogica.AgregarPrograma(programa);
-            }
-            catch (NegocioException ex) { throw (ex); }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public void QuitarPrograma(int programaId)
-        {
-            try
-            {
-                programaLogica.QuitarPrograma(programaId);
+                personaLogica.AgregarPersona(persona);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -51,11 +38,11 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public Programa TraerPrograma(int programaId)
+        public void QuitarPersona(int personaId)
         {
             try
             {
-                return programaLogica.TraerPrograma(programaId);
+                personaLogica.QuitarPersona(personaId);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)
@@ -64,11 +51,24 @@ namespace Ejecucion.Core.Servicios
             }
         }
 
-        public List<Programa> TraerProgramas(string buscar)
+        public Persona traerPersona(int personaId)
         {
             try
             {
-                return programaLogica.TraerProgramas(buscar);
+                return personaLogica.TraerPersona(personaId);
+            }
+            catch (NegocioException ex) { throw (ex); }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Persona> TraerPersonas(string buscar)
+        {
+            try
+            {
+                return personaLogica.TraerPersonas(buscar);
             }
             catch (NegocioException ex) { throw (ex); }
             catch (Exception ex)

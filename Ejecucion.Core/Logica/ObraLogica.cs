@@ -20,11 +20,11 @@ namespace Ejecucion.Core.Logica
             return datos.TraerObra(obraId);
         }
 
-        internal List<ObraBrowse> TraerObras(int obraId)
+        internal List<Obras> TraerObras(String buscar)
         {
             if (string.IsNullOrWhiteSpace(buscar))
                 throw new NotImplementedException("No se ha ningún criterio de busqueda. Intente de nuevo.");
-            List<Obras> obras = datos.TraerObras(obraId);
+            List<Obras> obras = datos.TraerObras(buscar);
             if (obras.Count > 0)
                 return obras;
             else
@@ -73,12 +73,12 @@ namespace Ejecucion.Core.Logica
             throw new NegocioException("No se encontró Empresa Constructora. Verifique");
         }
 
-        internal List<Programa> TraerPrograma()
-        {
-            List<Programa> programa = datos.TraerPrograma();
-            if (programa.Count > 0)
-                return programa;
-            throw new NegocioException("No se encontró Programa. Verifique");
-        }
+        //internal List<Programa> TraerPrograma()
+        //{
+        //    List<Programa> programa = datos.TraerPrograma();
+        //    if (programa.Count > 0)
+        //        return programa;
+        //    throw new NegocioException("No se encontró Programa. Verifique");
+        //}
     }
 }

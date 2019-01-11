@@ -10,10 +10,10 @@ namespace Ejecucion.Core.Servicios
     interface IPrograma
     {
         //Programa
-        List<Programa> Traerprogramas(string buscar);
+        List<Programa> TraerProgramas(string buscar);
         Programa TraerPrograma(int programaId);
         void AgregarPrograma(Programa programa);
         void ActualizarPrograma(Programa programa);
-        void QuitarProgramas(int programaId);
+        void QuitarPrograma(int programaId);
     }
 }
